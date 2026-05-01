@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trueloop | 100% Biologisch Abbaubare Beauty-Verpackungen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFDFD7',    /* Haupt-Hintergrundfarbe */
+                        secondary: '#E3E6A5',  /* Akzentfarbe */
+                        dark: '#553726',       /* Textfarbe */
+                        heroBg: '#B6DEDD',     /* Hintergrundfarbe für Header und Hero-Sektion */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFDFD7;
+            color: #553726;
+            scroll-behavior: smooth;
+        }
+        /* Benutzerdefinierte Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFDFD7; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E3E6A5; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #553726; 
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(227, 230, 165, 0.5);
+        }
+        /* Fallback-Stil für das Logo */
+        .logo-text-fallback {
+            font-size: 1.8rem;
+            letter-spacing: -0.05em;
+            font-weight: 500;
+        }
+        .logo-infinity {
+            font-family: serif;
+            font-size: 1.15em;
+            display: inline-block;
+            transform: translateY(-0.02em);
+        }
+        /* Animation für den Padding-Übergang der Hero-Sektion */
+        #about {
+            transition: padding 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans selection:bg-secondary selection:text-dark">
+
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-heroBg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 transition-all duration-500" id="nav-container">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="mainlogo.png" alt="trueloop logo" id="nav-logo" class="h-[52px] md:h-[62px] transition-all duration-500 mix-blend-multiply object-contain" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+                    <span id="logo-fallback" class="logo-text-fallback text-dark hidden" style="display: none;">
+                        truel<span class="logo-infinity">&infin;</span>p
+                    </span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="font-bold hover:text-white transition">Über uns</a>
+                    <a href="#product" class="font-bold hover:text-white transition">Produkt</a>
+                    <a href="#problem" class="font-bold hover:text-white transition">Das Problem</a>
+                    <a href="#solution" class="font-bold hover:text-white transition">Unsere Lösung</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-heroBg/95 backdrop-blur-md border-t border-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-2 font-bold hover:bg-secondary rounded-md">Über uns</a>
+                <a href="#product" class="block px-3 py-2 font-bold hover:bg-secondary rounded-md">Produkt</a>
+                <a href="#problem" class="block px-3 py-2 font-bold hover:bg-secondary rounded-md">Das Problem</a>
+                <a href="#solution" class="block px-3 py-2 font-bold hover:bg-secondary rounded-md">Unsere Lösung</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="relative pt-[106px] md:pt-[122px] pb-20 overflow-hidden min-h-screen flex flex-col items-center bg-heroBg">
+        
+        <div class="w-full mb-12 relative">
+            <img src="logo5.jpeg" alt="Hero Banner" class="w-full h-auto object-cover transform transition duration-300">
+            <div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-heroBg to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-secondary text-dark font-bold text-sm mb-6 border border-dark/20 tracking-wide uppercase">
+                Ein Projekt vom Canisius-Kolleg mit Boston Consulting Group
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                <span>Wahre Schönheit schützt nicht nur Sie,</span><br>
+                <span class="mt-2 inline-block">sondern auch unseren Planeten.</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium mb-10 max-w-3xl mx-auto opacity-90 leading-relaxed">
+                Zero Mikroplastik. 100% biologisch abbaubare Verpackungslösungen.<br>
+                Wir sind der B2B-Anbieter, der die Regeln des deutschen Beauty-Marktes neu schreibt.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#solution" class="bg-dark text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary hover:text-dark transition shadow-lg transform hover:-translate-y-1">
+                    Unsere Lösung ansehen
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-dark text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-dark hover:text-primary transition shadow-lg transform hover:-translate-y-1">
+                    Partnerschaft anfragen
+                </a>
+            </div>
+        </div>
+        <div class="absolute top-1/4 left-10 w-32 h-32 bg-white/20 rounded-full mix-blend-overlay filter blur-xl opacity-70 animate-pulse -z-10"></div>
+        <div class="absolute bottom-1/4 right-10 w-48 h-48 bg-white/30 rounded-full mix-blend-overlay filter blur-xl opacity-40 animate-pulse -z-10" style="animation-delay: 2s;"></div>
+    </section>
+
+    <section id="product" class="py-24 bg-secondary/30 scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-black mb-4">Unser Produkt</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto font-medium opacity-90">Bodenliebe – 100% biologisch abbaubare Musterverpackung.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-secondary to-white/30 opacity-40 blur-xl rounded-[3rem] transition duration-500 group-hover:opacity-70"></div>
+                <img src="bodenliebe.jpeg" alt="Bodenliebe Musterprodukt" class="relative rounded-[2.5rem] shadow-2xl mx-auto w-full object-cover border-8 border-white/60 transform hover:scale-[1.01] transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="py-20 scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black mb-4">Recycling ist nicht die beste Lösung</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto font-medium opacity-90">Die fatale Kehrseite des scheinbar perfekten deutschen Trennsystems</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+                    <i class="fa-solid fa-fire text-5xl mb-6 opacity-80"></i>
+                    <h3 class="text-xl font-bold mb-3">Die Wahrheit: 50% Verbrennung</h3>
+                    <p class="opacity-90 leading-relaxed text-sm md:text-base">
+                        Die Hälfte der Kosmetikverpackungen in der Gelben Tonne kann wegen komplexer Materialverbunde nicht sortiert werden. Sie werden verbrannt und setzen enorme Mengen an Treibhausgasen (CO2) frei.
+                    </p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+                    <i class="fa-solid fa-water text-5xl mb-6 opacity-80"></i>
+                    <h3 class="text-xl font-bold mb-3">Gefahr durch Mikroplastik</h3>
+                    <p class="opacity-90 leading-relaxed text-sm md:text-base">
+                        Bereits der Prozess des Waschens und Zerkleinerns erzeugt unzählige Mikroplastikpartikel, die unsere Gewässer belasten.
+                    </p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 text-center">
+                    <i class="fa-solid fa-leaf text-5xl mb-6 opacity-80"></i>
+                    <h3 class="text-xl font-bold mb-3">Das Paradox der Naturkosmetik</h3>
+                    <p class="opacity-90 leading-relaxed text-sm md:text-base">
+                        Deutsche Premium-Naturkosmetik verpackt 100% natürliche Cremes noch immer in umweltschädliches Erdöl-Plastik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="py-24 bg-secondary/30 scroll-mt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <div class="w-full h-96 rounded-[2.5rem] shadow-2xl relative overflow-hidden transform hover:scale-[1.02] transition duration-500 flex items-center justify-center">
+                        <img src="video1.gif" alt="100% Biobasierte Lösung" class="w-full h-full object-cover">
+                        <div class="absolute bottom-8 right-8 bg-dark text-primary px-6 py-2 rounded-full font-bold shadow-lg z-10">
+                            100% Biobasiert
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">Die PHA-Lösung :<br>Innovation, die das Paradoxon bricht</h2>
+
+                    <p class="text-lg mb-8 leading-relaxed font-medium opacity-90">
+                        PHA (Polyhydroxyalkanoate) ist ein natürliches Polymer, das von Mikroorganismen als Energiereserve gebildet wird. Es zersetzt sich zu 100 % vollständig im Boden und im Meer.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-2xl mt-1 mr-4 text-white bg-dark rounded-full"></i>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Perfekte Materialeigenschaften</h4>
+                                <p class="opacity-90 leading-relaxed">Stoßdämpfende, absolut unzerbrechliche Haltbarkeit, die herkömmlichem Plastik in nichts nachsteht.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-2xl mt-1 mr-4 text-white bg-dark rounded-full"></i>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Höchste TÜV AUSTRIA Zertifizierung</h4>
+                                <p class="opacity-90 leading-relaxed">Wir garantieren höchste Umweltstandards durch <strong>OK compost HOME</strong> und <strong>MARINE</strong> Zertifizierungen.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-dark text-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight">Wir verpacken die Zukunft,<br>ohne Spuren zu hinterlassen.</h2>
+            <div class="flex justify-center items-center gap-3 mb-4">
+                <img src="mainlogo.png" alt="trueloop" class="h-[200px] mix-blend-screen opacity-90 grayscale brightness-200" onerror="this.style.display='none'; document.getElementById('footer-logo-fallback').style.display='block';">
+                <span id="footer-logo-fallback" class="logo-text-fallback text-primary hidden" style="display: none;">
+                    truel<span class="logo-infinity">&infin;</span>p
+                </span>
+            </div>
+            
+            <div class="text-primary/70 mb-10 font-medium">
+                <p class="mb-1">Ein Projekt vom Canisius-Kolleg</p>
+                <p class="mb-1">Berlin, Deutschland</p>
+                <a href="https://www.businessatschool.de/de/startseite" target="_blank" rel="noopener noreferrer" class="block hover:text-white transition font-bold text-lg mb-4">business@school</a>
+                <a href="mailto:nam.sngj@gmail.com" class="inline-block mt-2 text-secondary hover:text-white transition font-bold border-b border-secondary pb-1">nam.sngj@gmail.com</a>
+            </div>
+
+            <div class="border-t border-primary/20 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary/50 gap-4">
+                <p>&copy; 2026 trueloop. Alle Rechte vorbehalten.</p>
+                <p>Gehostet auf GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const heroSection = document.getElementById('about');
+        const navContainer = document.getElementById('nav-container');
+        const logo = document.getElementById('nav-logo');
+        const navbar = document.getElementById('navbar');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                // Beim Scrollen: Navigationsleiste verkleinern
+                navbar.classList.add('shadow-md', 'backdrop-blur-md');
+                navContainer.classList.remove('py-4');
+                navContainer.classList.add('py-1');
+                
+                // Hero-Padding anpassen (für verkleinerte Navigation)
+                heroSection.classList.remove('pt-[106px]', 'md:pt-[122px]');
+                heroSection.classList.add('pt-[64px]', 'md:pt-[74px]');
+
+                if(logo) {
+                    // Kleine Logo-Größe
+                    logo.classList.remove('h-[52px]', 'md:h-[62px]');
+                    logo.classList.add('h-10', 'md:h-12'); 
+                }
+            } else {
+                // Ganz oben: Navigationsleiste wiederherstellen
+                navbar.classList.remove('shadow-md', 'backdrop-blur-md');
+                navContainer.classList.remove('py-1');
+                navContainer.classList.add('py-4');
+
+                // Hero-Padding wiederherstellen
+                heroSection.classList.remove('pt-[64px]', 'md:pt-[74px]');
+                heroSection.classList.add('pt-[106px]', 'md:pt-[122px]');
+
+                if(logo) {
+                    // Große Logo-Größe (1,3-fache Größe)
+                    logo.classList.remove('h-10', 'md:h-12');
+                    logo.classList.add('h-[52px]', 'md:h-[62px]');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
